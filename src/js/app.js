@@ -3,9 +3,9 @@
 // without the [] parameter, we are not creating a new module, but retrieving an existing one
 var app = angular.module('myApp', []);
 
-app.controller('myControl', function ($scope) {
+app.controller('myControl', ['$scope', function ($scope) {
 
-});
+}]);
 
 // create my own directive
 // the HTML element will use this directive's name as its tag name
