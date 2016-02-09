@@ -35,8 +35,8 @@
       <input ng-model="quantity">
     </p>
     <p>Display quantity using expression: {{quantity}}</p>
-    <p>Display quantity * price using ng-model:
-      <input ng-model="quantity*price">
+    <p>Can't display quantity * price using ng-model without error:
+      <input ng-model="quantity">
     </p>
     <p>Display quantity * price using expression: {{ quantity * price }} </p>
   </div>
@@ -46,7 +46,7 @@
       <li ng-repeat="x in names">Name: {{ x }}</li>
     </ul>
   </div>
-  
+
   <div ng-init="newNames = [
                 {name: 'Jani', country: 'Norway'},
                 {name: 'Hege', country: 'Sweden'},
@@ -57,10 +57,12 @@
       </li>
     </ul>
   </div>
-  
-  
+
   <my-directive></my-directive>
-        
+  <div my-directive></div>
+  <div class="my-directive"></div>
+  <!--  directive: my-directive -->
+
 
 
 

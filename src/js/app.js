@@ -11,6 +11,7 @@ app.controller('myControl', function ($scope) {
 // the HTML element will use this directive's name as its tag name
 app.directive('myDirective', function () {
   return {
+    restrict: "EACM",
     template: '<p>Made by my directive!</p>'
   };
 });
