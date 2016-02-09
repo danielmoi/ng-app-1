@@ -19,11 +19,34 @@
   </header>
 
   <p>My first expression: {{ 5 + 5 }}</p>
-  <p>This expression requires the module to be defined (if the controller is also declared in the html, then the controller also needs to be defined in the JS.</p>
+  <p>This expression requires the module to be defined (in the JS) and referenced (in the HTML) (if a controller is also referenced in the HTML, then the controller also needs to be defined in the JS.</p>
 
+  <!--    we can initialise app data within the HTML -->
+  <div ng-init="firstName = 'Daniel'">
 
+    <p>Display firstName using ng-model:
+      <input ng-model="firstName">
+    </p>
+    <p>Display firstName using expression: {{ firstName }}</p>
+  </div>
 
+  <div ng-init="quantity=3; price=50">
+    <p>Display quantity using ng-model:
+      <input ng-model="quantity">
+    </p>
+    <p>Display quantity using expression: {{quantity}}</p>
+    <p>Display quantity * price using ng-model:
+      <input ng-model="quantity*price">
+    </p>
+    <p>Display quantity * price using expression: {{ quantity * price }} </p>
+  </div>
 
+  <div ng-init="names=['Tom', 'Sally', 'Jill']">
+    <ul>
+      <li ng-repeat="x in names">Name: {{ x }}</li>
+    </ul>
+  </div>
+        
 
 
 
